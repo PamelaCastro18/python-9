@@ -2,31 +2,21 @@
 
 from django.db import models
 from django.db import models
-from django.core.exceptions import ValidationError
-from django.utils.translation import gettext_lazy as _
-from django.core.validators import validate_email, validate_ipv4_address
-
-
-def validate_password_min(value):
-    if len(value) < 8 :
-        raise ValidationError(
-            (' A senha deve ter mínimo 8 caracteres')
-        )
+from django.core.validators import MinLengthValidator
 
 class User(models.Model):
     name = models.CharField(max_length=50)
-    password = models.CharField(max_length=50,validators=[validate_password_min])
-    email = models.CharField(max_length=254, blank=True, unique=True, \
-            null=True, validators=[validate_email])
+    password = models.CharField(max_length=50, validators=[MinLengthValidator(8)])
+    email = models.EmailField (max_length=254, blank=True, unique=True, \
+            null=True)
     last_login = models.DateField(auto_now_add=True)
 
 class Agent(models.Model):
     name = models.CharField(max_length=50)
     env = models.CharField(max_length=20)
     version = models.CharField(max_length=5)
-    address = models.CharField(
-        max_length=39, 
-        validators= [validate_ipv4_address],
+    address = models.GenericIPAddressField(
+        protocol = 'IPv4',
         help_text = 'Endereço IP',
         blank=True, 
         null=True
@@ -55,8 +45,8 @@ class Event(models.Model):
  
     data = models.TextField()
     arquivado = models.BooleanField()
-    agent = models.ForeignKey('Agent', models.DO_NOTHING)
-    user = models.ForeignKey('User', models.DO_NOTHING)
+    agent = models.ForeignKey('Agent', on_delete = models.PROTECT)
+    user = models.ForeignKey('User', on_delete = models.PROTECT)
     date = models.DateTimeField(auto_now_add=True)
 
 
@@ -75,6 +65,6 @@ class Group(models.Model):
 
 
 class GroupUser(models.Model):
-    group = models.ForeignKey('Group', models.DO_NOTHING)
-    user = models.ForeignKey('User', models.DO_NOTHING)
+    group = models.ForeignKey('Group', on_delete = models.PROTECT )
+    user = models.ForeignKey('User', on_delete = models.PROTECT )
 

@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="6" name="pytest" skips="0" tests="6" time="1.922"><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="22" name="test_agent" time="0.004374265670776367"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="6" name="pytest" skips="0" tests="6" time="1.981"><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="22" name="test_agent" time="0.005755424499511719"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
 
 The above exception was the direct cause of the following exception:
-E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="30" name="test_event" time="0.0021522045135498047"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
+E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="30" name="test_event" time="0.0016264915466308594"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
 
 The above exception was the direct cause of the following exception:
-E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="38" name="test_event1" time="0.0021076202392578125"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
+E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="38" name="test_event1" time="0.0016505718231201172"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
 
 The above exception was the direct cause of the following exception:
-E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="26" name="test_group" time="0.002120494842529297"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
+E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="26" name="test_group" time="0.0016071796417236328"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
 
 The above exception was the direct cause of the following exception:
-E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="17" name="test_user" time="0.002172708511352539"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
+E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="17" name="test_user" time="0.0015549659729003906"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
 
 The above exception was the direct cause of the following exception:
-E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="42" name="test_user_group" time="0.002353191375732422"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
+E   django.db.utils.OperationalError: no such table: api_user</failure></testcase><testcase classname="test_submit.TestChallenge9" file="test_submit.py" line="42" name="test_user_group" time="0.0018761157989501953"><failure message="django.db.utils.OperationalError: no such table: api_user">E   sqlite3.OperationalError: no such table: api_user
 
 The above exception was the direct cause of the following exception:
 E   django.db.utils.OperationalError: no such table: api_user</failure></testcase></testsuite>
